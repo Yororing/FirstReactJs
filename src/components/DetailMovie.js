@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import styles from "../css/Detail.module.css";
 
 function DetailMovie({
   backImg,
@@ -10,10 +11,10 @@ function DetailMovie({
   description,
 }) {
   return (
-    <div>
-      <img src={backImg} alt={backImg} />
-      <img src={coverImg} alt={title} />
-      <h1>{title}</h1>
+    <div className={styles.container}>
+      <img className={styles.backImg} src={backImg} alt={backImg} />
+      <img className={styles.coverImg} src={coverImg} alt={title} />
+      <h1 className={styles.title}>{title}</h1>
       <h3>rating: {rating}</h3>
       <h3>language: {language}</h3>
       <p>{description}</p>
