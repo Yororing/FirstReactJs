@@ -6,12 +6,8 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route path="/movie/:id">
-          <Detail />
-        </Route>
-        <Route path="/">
-          <Home />
-        </Route>
+        <Route path="/movie/:id" component={Detail} />
+        <Route exact path="/" component={Home} />
       </Switch>
     </Router>
   );
